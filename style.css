@@ -41,6 +41,7 @@ body {
 
 html {
     height: 100%;
+    font-size: 18px;
 }
 
 body {
@@ -49,8 +50,9 @@ body {
 }
 
 .max-width-wrapper {
-    max-width: 768px;
+    max-width: 800px;
     margin: auto;
+    padding: 0 var(--spacing-02);
 }
 
 header {
@@ -58,21 +60,22 @@ header {
 
     background-color: var(--color-neutral-100);
     border-bottom: 4px solid var(--color-neutral-500);
-
-    font-size: var(--font-size-02);
-}
-
-strong {
-    color: var(--color-primary);
 }
 
 .intro-chunk {
     max-width: 300px;
-    padding: 0 var(--spacing-02);
 }
 
-.title {
+.intro-chunck .title {
     font-size: var(--font-size-04);
+}
+
+.intro-chunk .title {
+    font-size: var(--font-size-02);
+}
+
+.intro-chunk strong {
+    color: var(--color-primary);
 }
 
 main {
@@ -80,20 +83,30 @@ main {
 }
 
 .card {
-    padding: var(--spacing-00) var(--spacing-02) var(--spacing-01) var(--spacing-02);
+    padding: var(--spacing-02);
+    margin: 0 calc(-1 * var(--spacing-02));
 
     background-color: var(--color-neutral-100);
     border-bottom: 4px solid var(--color-neutral-500);
+}
 
+.card p {
     font-size: var(--font-size-01);
+    line-height: 1.4;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
 }
 
 .indented-heading {
     width: fit-content;
 
     margin: 0;
-    margin-left: calc(-2 * var(--spacing-02));
-    padding: var(--spacing-02) var(--spacing-02) var(--spacing-02) calc(2 * var(--spacing-02));
+    margin-left: calc(-1 * var(--spacing-03));
+    margin-top: calc(-1 * var(--spacing-01));
+    padding: var(--spacing-02);
+    padding-left: var(--spacing-03);
 
     border-bottom: 4px solid var(--color-secondary-dark);
     background-color: var(--color-secondary-light);
